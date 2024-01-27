@@ -4,17 +4,17 @@ let myImage = document.querySelector("img");
 
 myImage.onclick = function() {
   const mySrc = myImage.getAttribute("src");
-  if (mySrc === "images/firefox_logo.png") {
-    myImage.setAttribute("src", "images/chrome_logo.png");
+  if (mySrc === "images/ginger_soup.jpeg") {
+    myImage.setAttribute("src", "images/hinterland-lineup-2024.jpeg");
   } else {
-    myImage.setAttribute("src", "images/firefox_logo.png");
+    myImage.setAttribute("src", "images/ginger_soup.jpeg");
   }
 };
 
 // Personalized welcome message code
 
 let myButton = document.querySelector("button");
-let myHeading = document.querySelector("h1");
+let myHeading = document.querySelector("h2");
 
 function setUserName() {
     let myName = prompt("Please enter your name.");
@@ -22,7 +22,7 @@ function setUserName() {
         setUserName();
       } else {
         localStorage.setItem('name', myName);
-        myHeading.innerHTML = 'Mozilla is cool, ' + myName;
+        myHeading.innerHTML = 'Welcome to my site, ' + myName;
       }
     };
 
@@ -30,7 +30,7 @@ if (!localStorage.getItem("name")) {
     setUserName();
 } else {
     const storedName = localStorage.getItem("name");
-    myHeading.textContent = `Mozilla is cool, ${storedName}`;
+    myHeading.textContent = `Welcome to my site, ${storedName}`;
 };
 
 myButton.onclick = function() {
